@@ -4,178 +4,183 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3 Years Together 💗</title>
+<title>LOVE ♡ Proposal Letter</title>
 
 <style>
 *{box-sizing:border-box}
-
 body{
- margin:0;
- min-height:100vh;
- display:flex;
- justify-content:center;
- align-items:center;
- background:#fff0e9;
- font-family:'Courier New',monospace;
- overflow:hidden;
+ margin:0;min-height:100vh;overflow:hidden;
+ display:grid;place-items:center;
+ background:radial-gradient(ellipse at 20% 40%,#ffe0e6,transparent 48%),radial-gradient(ellipse at 80% 60%,#fff0d9,transparent 48%),#fff0e5;
+ font-family:"Courier New",monospace;color:#713b4c;
 }
-
-.card{
- width:min(340px,90vw);
- background:#f8c4d3;
- border:3px solid #df829a;
- border-radius:10px;
- box-shadow:0 12px 30px #c98b9b55;
- text-align:center;
- overflow:hidden;
- z-index:2;
-}
-
-.top{
- padding:13px;
- border-bottom:3px solid #df829a;
- color:#77344c;
- font-weight:bold;
-}
-
-.content{padding:25px 15px}
-
-h2{
- font-size:18px;
- line-height:1.7;
- color:#77344c;
-}
-
-.cat{
- font-size:75px;
- margin:15px;
- animation:bounce 1s infinite alternate;
-}
-
-@keyframes bounce{
- to{transform:translateY(-10px)}
-}
-
-.buttons{
- display:flex;
- justify-content:center;
- gap:18px;
- margin-top:20px;
-}
-
-button{
- background:#fff8f8;
- border:2px solid #dc829a;
- color:#a54c68;
- border-radius:7px;
- padding:11px 22px;
- font-weight:bold;
- font-family:inherit;
- cursor:pointer;
-}
-
-#result{
- display:none;
- color:#9c3e60;
- line-height:1.8;
- margin-top:20px;
- font-size:15px;
-}
-
-.heart{
- position:fixed;
- top:-30px;
- animation:fall 5s linear forwards;
- pointer-events:none;
-}
-
-@keyframes fall{
- to{
-  transform:translateY(110vh) rotate(360deg);
-  opacity:0;
- }
-}
+.scene{position:relative;width:min(94vw,650px);height:min(86vh,480px);display:grid;place-items:center}
+.specks{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.speck{position:absolute;color:#e6a0ae;opacity:.65;animation:drift 7s linear infinite}
+@keyframes drift{0%{transform:translateY(-30px);opacity:0}15%{opacity:.7}100%{transform:translateY(520px) rotate(220deg);opacity:0}}
+.envelope-wrap{position:absolute;display:grid;place-items:center;transition:.7s;z-index:3}
+.envelope-wrap.hide{opacity:0;transform:scale(.72) translateY(-25px);pointer-events:none}
+.envelope{position:relative;width:150px;height:100px;cursor:pointer;filter:drop-shadow(0 8px 8px #b77c8a44);animation:float 2.3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-7px)}}
+.env-back{position:absolute;inset:0;background:#f5b6c5;border:1.5px solid #c8758b;border-radius:4px}
+.env-front{position:absolute;inset:0;background:linear-gradient(145deg,transparent 49%,#e99caf 50%) left/50% 100% no-repeat,linear-gradient(215deg,transparent 49%,#f0a9bb 50%) right/50% 100% no-repeat;clip-path:polygon(0 100%,50% 48%,100% 100%);z-index:2}
+.env-flap{position:absolute;inset:0;background:#f8c7d0;clip-path:polygon(0 0,100% 0,50% 58%);transform-origin:top;transition:transform .8s;z-index:3}
+.envelope.open .env-flap{transform:rotateX(180deg);z-index:0}
+.seal{position:absolute;z-index:4;left:calc(50% - 10px);top:42px;color:#c85d7d;font-size:20px}
+.pen{position:absolute;right:-29px;bottom:-27px;font-size:35px;transform:rotate(25deg);z-index:5}
+.tap{font-size:11px;letter-spacing:1px;text-align:center;margin-top:18px;color:#9d6675}
+.window{width:min(300px,88vw);border:2px solid #ce8295;border-radius:9px;background:#f6c2d0;box-shadow:0 12px 25px #b8788750;overflow:hidden;opacity:0;transform:scale(.72);visibility:hidden;transition:opacity .55s,transform .65s;z-index:2}
+.window.show{opacity:1;transform:scale(1);visibility:visible}
+.titlebar{height:27px;background:#f1aabd;border-bottom:2px solid #cf8295;display:flex;align-items:center;justify-content:space-between;padding:0 9px;font-size:11px;font-weight:bold;letter-spacing:1px}
+.controls{display:flex;gap:4px}
+.controls i{font-style:normal;font-size:9px;background:#fff1f2;border:1px solid #d18a9a;padding:1px 3px}
+.toolbar{height:23px;background:#f9d8df;border-bottom:1px solid #dc9aaa;text-align:center;letter-spacing:5px;font-size:11px;padding-top:4px;color:#c75d7c}
+.content{padding:14px 12px 16px;text-align:center;background-color:#f8cbd5;background-image:linear-gradient(90deg,#ffffff38 50%,transparent 50%),linear-gradient(#ffffff38 50%,transparent 50%);background-size:12px 12px}
+h1{font-size:16px;line-height:1.45;margin:2px 0 8px;color:#713b4c}
+.cat{width:112px;height:106px;margin:2px auto 9px;display:block;image-rendering:pixelated}
+.buttons{display:flex;justify-content:center;gap:12px;min-height:31px}
+button{font:bold 11px "Courier New",monospace;color:#87495b;background:#fff8f5;border:1.5px solid #cb8294;border-radius:2px;padding:6px 15px;box-shadow:2px 2px 0 #d895a5;cursor:pointer}
+#result{display:none;font-size:12px;line-height:1.7;margin:12px 0 0;color:#7c4052}
+.hint{font-size:10px;margin-top:10px;color:#a66b7b}
+.heart{position:fixed;top:-30px;pointer-events:none;z-index:5;animation:fall 4.5s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:0}}
+@media(max-height:500px){.scene{height:94vh}.window{transform:scale(.85)}.window.show{transform:scale(.85)}}
 </style>
 </head>
 
 <body>
+<div class="scene">
+ <div class="specks" id="specks"></div>
 
-<div class="card">
- <div class="top">♡ A SPECIAL LETTER ♡</div>
-
- <div class="content">
-
-  <h2>
-   Happy 3 Years, My Love ♡
-   <br>
-   Still Love Me?
-  </h2>
-
-  <div class="cat">🐱💗</div>
-
-  <div class="buttons">
-   <button id="no">NO</button>
-   <button id="yes" onclick="showLove()">YES</button>
+ <div class="envelope-wrap" id="envelopeWrap">
+  <div>
+   <div class="envelope" id="envelope" role="button" tabindex="0">
+    <div class="env-back"></div>
+    <div class="env-flap"></div>
+    <div class="env-front"></div>
+    <div class="seal">♥</div>
+    <div class="pen">✎</div>
+   </div>
+   <div class="tap">♡ TAP TO OPEN ♡</div>
   </div>
-
-  <div id="result">
-   💗 YAY! 💗
-   <br>
-   Happy 3 Years Together!
-   <br>
-   Thank you for being a part of my life.
-   <br>
-   Stay Happy Always! 🌸
-  </div>
-
  </div>
+
+ <section class="window" id="letter">
+  <div class="titlebar">
+   <span>LOVE</span>
+   <span class="controls"><i>－</i><i>□</i><i>×</i></span>
+  </div>
+  <div class="toolbar">♥ · ♥ · ♥</div>
+
+  <div class="content">
+   <h1>Happy 3 years, my love ♡<br>Still love me?</h1>
+
+   <svg class="cat" viewBox="0 0 112 106" xmlns="http://www.w3.org/2000/svg">
+    <g shape-rendering="crispEdges" fill="#17151d">
+     <rect x="22" y="15" width="18" height="18"/>
+     <rect x="72" y="15" width="18" height="18"/>
+     <rect x="15" y="30" width="82" height="51"/>
+     <rect x="23" y="78" width="15" height="12"/>
+     <rect x="74" y="78" width="15" height="12"/>
+     <rect x="34" y="87" width="12" height="9"/>
+     <rect x="66" y="87" width="12" height="9"/>
+    </g>
+    <g fill="#fff">
+     <rect x="29" y="29" width="18" height="19"/>
+     <rect x="65" y="29" width="18" height="19"/>
+    </g>
+    <g fill="#17151d">
+     <rect x="36" y="35" width="7" height="10"/>
+     <rect x="69" y="35" width="7" height="10"/>
+    </g>
+    <g fill="#f05b83" shape-rendering="crispEdges">
+     <rect x="46" y="62" width="9" height="9"/>
+     <rect x="57" y="62" width="9" height="9"/>
+     <rect x="40" y="69" width="33" height="13"/>
+     <rect x="46" y="82" width="21" height="8"/>
+     <rect x="51" y="90" width="11" height="5"/>
+    </g>
+    <path d="M53 69h7v7h-7z" fill="#c92f61"/>
+   </svg>
+
+   <div class="buttons" id="buttons">
+    <button id="yes">YES</button>
+    <button id="no">NO</button>
+   </div>
+
+   <div id="result">
+    💗 YAY! 💗<br>
+    Happy 3 Years Together!<br>
+    Thank you for being part of my life.<br>
+    Stay happy always! 🌸
+   </div>
+   <div class="hint">♡ made with love ♡</div>
+  </div>
+ </section>
 </div>
 
 <script>
+const envelope=document.getElementById('envelope');
+const envelopeWrap=document.getElementById('envelopeWrap');
+const letter=document.getElementById('letter');
+let opened=false;
 
-const no=document.getElementById("no");
-
-function moveNo(){
- no.style.position="fixed";
- no.style.left=Math.random()*65+"vw";
- no.style.top=Math.random()*75+"vh";
+function openLetter(){
+ if(opened)return;
+ opened=true;
+ envelope.classList.add('open');
+ setTimeout(()=>{
+  envelopeWrap.classList.add('hide');
+  letter.classList.add('show');
+ },650);
 }
 
-no.addEventListener("click",moveNo);
-no.addEventListener("touchstart",moveNo);
-
-function showLove(){
-
- document.getElementById("result").style.display="block";
- document.querySelector(".buttons").style.display="none";
-
- for(let i=0;i<45;i++){
-  setTimeout(createHeart,i*80);
+envelope.addEventListener('click',openLetter);
+envelope.addEventListener('keydown',e=>{
+ if(e.key==='Enter'||e.key===' '){
+  e.preventDefault();
+  openLetter();
  }
+});
+
+const no=document.getElementById('no');
+function dodge(){
+ const maxX=Math.max(8,window.innerWidth-90);
+ const maxY=Math.max(8,window.innerHeight-55);
+ no.style.position='fixed';
+ no.style.left=(8+Math.random()*(maxX-8))+'px';
+ no.style.top=(8+Math.random()*(maxY-8))+'px';
 }
+no.addEventListener('pointerenter',dodge);
+no.addEventListener('click',dodge);
+
+document.getElementById('yes').addEventListener('click',()=>{
+ document.getElementById('result').style.display='block';
+ document.getElementById('buttons').style.display='none';
+ for(let i=0;i<35;i++)setTimeout(createHeart,i*90);
+});
 
 function createHeart(){
-
- const h=document.createElement("div");
-
- h.className="heart";
-
- h.innerHTML=["💗","💕","💖","❤️","🌸"][
- Math.floor(Math.random()*5)
- ];
-
- h.style.left=Math.random()*100+"vw";
- h.style.fontSize=(15+Math.random()*20)+"px";
-
+ const h=document.createElement('span');
+ h.className='heart';
+ h.textContent=['💗','💕','💖','♥','🌸'][Math.floor(Math.random()*5)];
+ h.style.left=Math.random()*100+'vw';
+ h.style.fontSize=(13+Math.random()*17)+'px';
  document.body.appendChild(h);
-
- setTimeout(()=>h.remove(),5000);
+ setTimeout(()=>h.remove(),4600);
 }
 
-setInterval(createHeart,650);
-
+const specks=document.getElementById('specks');
+for(let i=0;i<24;i++){
+ const s=document.createElement('span');
+ s.className='speck';
+ s.textContent=Math.random()>.5?'♥':'·';
+ s.style.left=Math.random()*100+'%';
+ s.style.top=(-Math.random()*500)+'px';
+ s.style.animationDelay=(Math.random()*7)+'s';
+ s.style.fontSize=(7+Math.random()*8)+'px';
+ specks.appendChild(s);
+}
 </script>
-
 </body>
 </html>
-
